@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 220px;
-    height: 280px;
+    width: 280px;
+    height: 330px;
     background: transparent;
     padding: 0;
     position:absolute;
@@ -14,17 +14,14 @@ export const ComicCover = styled.div`
     width: 80%;
     height: 93%;
     left: 0;
-    border: 1px solid #000000;
     padding: 0;
     position: absolute;
-    background: yellow;
+    border-radius: 4px;
 }
-   
-  
 `;
 
 export const InfoContainer = styled.div`
-       width: 60%;
+    width: 60%;
     z-index: 2;
     height: 100px;
     right: 0;
