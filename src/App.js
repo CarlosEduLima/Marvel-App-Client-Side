@@ -41,7 +41,7 @@ function App() {
      <BrowserRouter>
             <Switch>
                 <Route path="/login" component={Login} />
-                <ProtectedRoute path="/protect-route" component={PrivateComponent} />
+                <ProtectedRoute path="/" component={PrivateComponent} />
             </Switch>
         </BrowserRouter>
     <GlobalStyles />
