@@ -1,12 +1,13 @@
 import React from 'react';
-import Main from '../Main';
-import { Container, Wrapper } from './styles';
+import { Container, Wrapper, Header, Footer } from './styles';
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
     <Container>
       <Wrapper>
-        <Main />
+        <Header />
+        {children}
+        <Footer />
       </Wrapper>
     </Container>
   );
