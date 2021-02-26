@@ -1,10 +1,10 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-
+import React from 'react'
+import Layout from '../../components/Layout'
+import ComicCard from '../../components/ComicCard'
 const Home = () => {
   return (
     <Layout>
-        <h1>Home</h1>
+        <ComicCard />
     </Layout>
   );
 };

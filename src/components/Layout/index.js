@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Wrapper, Header, Footer } from './style';
-
+import { Container, Wrapper } from './style';
+import Header from '../Header'
+import Footer from '../Footer'
 const Layout = ({children}) => {
   return (
     <Container>

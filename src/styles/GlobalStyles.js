@@ -10,7 +10,7 @@ export default createGlobalStyle`
   html, body, #root{
       max-height: 100vh;
       max-width: 100vh;
-
+      background: var(--white);
       height: 100%;
       width: 100%;
   }
@@ -23,16 +23,13 @@ export default createGlobalStyle`
       background: var(--primary);
   }
   :root{
-    --primary: #EE1B24;
-    --secondary: #15181C;
+    --primary: #ED1B24;
+    --secondary: #EE1B24;
     --search: #202327;
     --white: #D9D9D9;
     --gray: #7A7A7A;
     --outline: #2F3336;
     --retweet: #00C06B;
-    --like: #E8265E;
-    --twitter: #33A1F2;
-    --twitter-dark-hover: #011017;
-    --twitter-light-hover: #2C8ED6;
+    
   }
 `;
