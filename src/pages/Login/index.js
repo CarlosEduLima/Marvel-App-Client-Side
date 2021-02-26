@@ -25,7 +25,9 @@ function Login({ history }) {
         <Input placeholder="Senha" />
         <Button onClick={() => handleSubmit()}>Login</Button>
         <span>Não possui cadastro?</span>
+        <Link to='/sign-up'>
         <LinkButton>clique aqui</LinkButton>
+        </Link>
       </Form>
     </Container>
   );
