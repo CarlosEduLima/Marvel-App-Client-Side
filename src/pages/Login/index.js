@@ -1,5 +1,5 @@
 import {Container, Logo, Form, Input, Button, Footer, LinkButton} from './style.js'
-import Marvel from '../../img/marvel_logo.png'
+import Marvel from '../../assets/marvel_logo.png'
 import { Link } from 'react-router-dom'
 
 function Login() {

@@ -8,7 +8,7 @@ function App() {
     <>
      <BrowserRouter>
             <Switch>
-                <Route  path="/login" component={Login} />
+                <Route path="/login" component={Login} />
             </Switch>
         </BrowserRouter>
     <GlobalStyles />
