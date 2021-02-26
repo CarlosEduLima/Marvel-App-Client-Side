@@ -8,6 +8,9 @@ export default createGlobalStyle`
       color: var(--white);
     }
   html, body, #root{
+      max-height: 100vh;
+      max-width: 100vh;
+
       height: 100%;
       width: 100%;
   }

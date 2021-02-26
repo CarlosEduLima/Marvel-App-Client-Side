@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Wrapper, Header, Footer } from './styles';
+import { Container, Wrapper, Header, Footer } from './style';
 
 const Layout = ({children}) => {
   return (

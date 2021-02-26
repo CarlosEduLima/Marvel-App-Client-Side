@@ -1,6 +1,7 @@
 import GlobalStyles from './styles/GlobalStyles';
 import React from 'react';
 import Login from './pages/Login'
+import Home from './pages/Home'
 import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 import {isAuthenticated, logout} from './services/auth'
 
@@ -24,16 +25,6 @@ export const ProtectedRoute = ({ component: Component, path,...rest}) => {
   );
 };
 
-function PrivateComponent(){
-  return(
-    <>
-    <h1>I'm Private</h1>
-    <Link to="/login">
-    <button onClick={() => logout()} style={{width:'40px', height:'40px', background:'blue'}}>Logout</button>
-    </Link>
-    </>
-  )
-}
 
 function App() {
   return (
@@ -41,7 +32,7 @@ function App() {
      <BrowserRouter>
             <Switch>
                 <Route path="/login" component={Login} />
-                <ProtectedRoute path="/" component={PrivateComponent} />
+                <ProtectedRoute path="/" component={Home} />
             </Switch>
         </BrowserRouter>
     <GlobalStyles />
