@@ -8,20 +8,13 @@ import {
   InfoContainer,
   Title,
   Type,
-  MoreInfoButton,
-  ModalContainer,
-  ComicImg,
-  DescriptionContainer,
-  CreatorsContainer,
-  CharactersContainer,
-  CloseIcon,
-  CloseButton
+  MoreInfoButton
 } from "./style";
 const ComicCard = () => {
   const customStyles = {
     content: {
-      top: "",
-      left: "",
+      top: "50%",
+      left: "50%",
       right: "auto",
       bottom: "auto",
       marginRight: "-50%",
