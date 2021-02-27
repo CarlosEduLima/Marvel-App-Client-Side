@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { Form, Input, CloseIcon, Button, CloseButton } from "./style";
 
-const EditNameModal = ({openModal, closeModal, modalIsOpen}) => {
+const EditNameModal = ({closeModal, modalIsOpen}) => {
   const customStyles = {
     content: {
       top: "50%",

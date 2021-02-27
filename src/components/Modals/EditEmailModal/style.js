@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {CloseOutline} from '../../styles/icons';
+import {CloseOutline} from '../../../styles/icons.js';
 export const Form = styled.div`
 display: flex;
 flex-direction: column;

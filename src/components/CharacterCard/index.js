@@ -13,8 +13,8 @@ import {
 const CharacterCard = () => {
   const customStyles = {
     content: {
-      top: "",
-      left: "",
+      top: "50%",
+      left: "50%",
       right: "auto",
       bottom: "auto",
       marginRight: "-50%",

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import { Link } from "react-router-dom";
-import EditNameModal from "../../components/EditNameModal";
-import EditEmailModal from '../../components/EditEmailModal'
+import EditNameModal from "../../components/Modals/EditNameModal"
+import EditEmailModal from '../../components/Modals/EditEmailModal'
 import {
   Container,
   InfoContainer,
