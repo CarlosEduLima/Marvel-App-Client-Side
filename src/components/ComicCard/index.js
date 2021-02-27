@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Modal from "react-modal";
-import ComicModal from '../ComicModal'
+import ComicModal from '../Modals/ComicModal'
 import {
   Container,
   ComicCover,
