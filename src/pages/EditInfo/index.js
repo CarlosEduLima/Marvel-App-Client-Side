@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import { Link } from "react-router-dom";
 import EditNameModal from "../../components/EditNameModal";
+import EditEmailModal from '../../components/EditEmailModal'
 import {
   Container,
   InfoContainer,
@@ -18,6 +19,15 @@ function Login({ history }) {
   function closeeditNameModal() {
    seteditNameModalOpen(false);
   }
+
+  const [editEmailModalIsOpen, seteditEmailModalOpen] = useState(false);
+  function openeditEmailModal() {
+   seteditEmailModalOpen(true);
+  }
+
+  function closeeditEmailModal() {
+   seteditEmailModalOpen(false);
+  }
   return (
     <Layout>
       <Container>
@@ -27,11 +37,16 @@ function Login({ history }) {
             closeModal={closeeditNameModal}
             modalIsOpen={editNameModalIsOpen}
           />
+           <EditEmailModal
+            openModal={openeditEmailModal}
+            closeModal={closeeditEmailModal}
+            modalIsOpen={editEmailModalIsOpen}
+          />
           <EditInfoButton onClick={openeditNameModal}>
             Edit Name
             <EditIcon />
           </EditInfoButton>
-          <EditInfoButton>
+          <EditInfoButton onClick={openeditEmailModal}>
             Edit Email
             <EditIcon />
           </EditInfoButton>

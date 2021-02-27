@@ -1,24 +1,14 @@
 import styled from 'styled-components';
-import {Edit} from '../../styles/icons'
-export const Container = styled.div`
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const InfoContainer = styled.div`
+import {CloseOutline} from '../../styles/icons';
+export const Form = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 background-color: #FFFFFF;
 text-align: center;
 padding: 10px;
-height: 340px;
-width:400px;
+height: 100%;
+width:100%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border-radius: 3px;
 > span {
@@ -27,16 +17,14 @@ border-radius: 3px;
     }
 `; 
 
-export const EditInfoButton = styled.button`
-  font-size: 1em;
-  margin: 1em;
+export const Input = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
   height: 45px;
-  padding: 0.25em 1em;
+  font-size:14px;
+  color: palevioletred;
+  background: #F5F5F5;
   border-radius: 3px;
-  font-weight: bold;
-  background-color: #EE1B24;
-  color: #FFFFFF;
-  cursor: pointer;
 `;
 
 export const Button = styled.button`
@@ -51,11 +39,18 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const EditIcon = styled(Edit)`
-width: 20px;
-    right: 0;
-    height: 20px;
-    margin-left: 10px;
+export const CloseButton = styled.button`
+background: none;
+border: none;
+top:0;
+right:0;
+position: absolute
 `;
+
+export const CloseIcon = styled(CloseOutline)`
+width: 20px;
+height: 20px;
+`;
+
 
 
