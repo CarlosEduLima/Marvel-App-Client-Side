@@ -20,7 +20,7 @@ const scaleAnimation = keyframes`
 export const ContainerModal = styled.div`
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 0;
   z-index: 2;
   width: 260px;
@@ -85,6 +85,7 @@ export const Content = styled.div`
 export const ContainerFooter = styled.div`
   padding: 15px;
   padding-bottom: 20px;
+  width: 100%;
 `;
 
 export const Footer = styled.div`

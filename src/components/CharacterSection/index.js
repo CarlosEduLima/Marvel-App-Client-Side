@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductCard from '../ProductCard';
+import CharacterCard from '../CharacterCard';
 import { Container, Content, ScrollContent } from './styles';
 
 export default function ProductSession({ title, scrollEnabled = false }) {
@@ -10,15 +10,15 @@ export default function ProductSession({ title, scrollEnabled = false }) {
         <h2>{title}</h2>
         {scrollEnabled ? (
           <ScrollContent>
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
           </ScrollContent>
         ) : (
             <>
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              <CharacterCard />
+              <CharacterCard />
+              <CharacterCard />
             </>
           )}
       </Content>

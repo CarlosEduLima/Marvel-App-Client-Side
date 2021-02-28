@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     height: 100%;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -31,9 +31,9 @@ height: 340px;
 width:400px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border-radius: 3px;
-> span {
-        font-size: 14px;
-        color: var(--secondary);
+> h3 {
+      margin-bottom: 20px;
+      color: var(--primary)
     }
 `; 
 
@@ -57,6 +57,12 @@ export const Button = styled.button`
   background-color: #EE1B24;
   color: #FFFFFF;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover{
+    background: red
+  }
 `;
 export const Logo = styled.img`
     width: 280px;
