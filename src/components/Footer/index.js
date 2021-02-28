@@ -1,10 +1,13 @@
 import React from 'react';
-import { Container } from './style';
+import { Container, Content } from './style';
 
 const Header = () => {
   return (
     <Container>
+      <Content>
+
       <span>Created By Carlos</span>
+      </Content>
     </Container>
   );
 };

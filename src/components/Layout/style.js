@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-    max-width: 990px;
+    //max-width: 990px;
     width: 100%;
     margin: 0 auto;
     padding: 0;

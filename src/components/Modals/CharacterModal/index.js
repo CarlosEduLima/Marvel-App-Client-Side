@@ -15,7 +15,7 @@ const ComicModal = ({closeModal}) => {
         <ComicImg>
           <img
             src={
-              "http://i.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/portrait_uncanny.jpg"
+              "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/portrait_xlarge.jpg"
             }
           />
           <CloseButton onClick={closeModal}>
@@ -23,20 +23,19 @@ const ComicModal = ({closeModal}) => {
           </CloseButton>
         </ComicImg>
         <DescriptionContainer>
-          <h4>Comic name</h4>
+          <h4>Character name</h4>
           <p>asdasdadsasdasdasdadsa</p>
-          <span>13.80</span>
         </DescriptionContainer>
         <CreatorsContainer>
-          <span>Creators</span>
+          <span>Comics</span>
           <ul>
-            <li>Creator Name</li>
+            <li>comic name</li>
           </ul>
         </CreatorsContainer>
         <CharactersContainer>
-          <span>Creators</span>
+          <span>Series</span>
           <ul>
-            <li>Creator Name</li>
+            <li>Series</li>
           </ul>
         </CharactersContainer>
       </ModalContainer>

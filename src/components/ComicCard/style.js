@@ -7,6 +7,7 @@ export const Container = styled.div`
     background: transparent;
     padding: 0;
     position:relative;
+    display: inline-block;
   
 `;
 

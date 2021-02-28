@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Modal from "react-modal";
-import ComicModal from '../Modals/ComicModal'
+import CharacterModal from '../Modals/CharacterModal'
 import {
   Container,
   ComicCover,
@@ -43,7 +43,7 @@ const CharacterCard = () => {
           style={customStyles}
           contentLabel="Example Modal"
         >
-         <ComicModal closeModal={closeModal}/>
+         <CharacterModal closeModal={closeModal}/>
         </Modal>
         <ComicCover>
           <img

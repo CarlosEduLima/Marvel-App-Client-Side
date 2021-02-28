@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Container, Logo, Form, Input, Button, LinkButton } from "./style.js";
-import Marvel from "../../assets/marvel_logo.png";
+import Marvel from "../../assets/marvel.svg";
 
 
 function ResetPassword({ history }) {

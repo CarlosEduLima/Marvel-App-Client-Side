@@ -7,7 +7,7 @@ import {
     Footer,
     LinkButton,
   } from "./style.js";
-  import Marvel from "../../assets/marvel_logo.png";
+  import Marvel from "../../assets/marvel.svg";
   import { Link } from "react-router-dom";
   import { login } from "../../services/auth";
   

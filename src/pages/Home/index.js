@@ -1,22 +1,15 @@
-import React from 'react'
-import Layout from '../../components/Layout'
-import ComicCard from '../../components/ComicCard'
-import CharacterCard from '../../components/CharacterCard'
-import {Container, CardItem} from './style'
+import React from "react";
+import Layout from "../../components/Layout";
+import ComicCard from "../../components/ComicCard";
+import CharacterCard from "../../components/CharacterCard";
+import ProductSection from "../../components/ProductSection";
+import { Container, Content } from "./style";
 const Home = () => {
   return (
     <Layout>
-        <Container>
-            <ul>
-                <li><ComicCard /></li>
-                
-                <li> <CharacterCard /></li>
-                
-                <li> <CharacterCard /></li>
-                
-                <li> <CharacterCard /></li>
-            </ul>
-        </Container>
+      <Container>
+          <ProductSection title="Quadrinhos" />
+      </Container>
     </Layout>
   );
 };
