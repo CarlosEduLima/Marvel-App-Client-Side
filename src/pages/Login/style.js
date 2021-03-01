@@ -60,6 +60,9 @@ export const Button = styled.button`
   background-color: #EE1B24;
   color: #FFFFFF;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 `;
 export const Logo = styled.img`
     width: 280px;

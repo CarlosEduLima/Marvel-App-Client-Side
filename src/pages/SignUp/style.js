@@ -45,6 +45,10 @@ export const Input = styled.input`
   color: palevioletred;
   background: #F5F5F5;
   border-radius: 3px;
+  color: #000000;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Button = styled.button`
