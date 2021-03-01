@@ -74,10 +74,11 @@ export const LinkButton = styled.button`
     font-size:14px;
     font-weight: bold;
     color: var(--primary);
+    margin-bottom: 10px;
     background-color: none;
     cursor: pointer;
-    > button:focus, button:active {
-        border:none
-    }
+    &:focus {
+    outline: none;
+  }
 `;
 
