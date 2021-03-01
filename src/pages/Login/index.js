@@ -61,9 +61,11 @@ function Login({ history }) {
           placeholder="Senha"
         />
         <Button type="submit">Login</Button>
-        <span>Não possui cadastro?</span>
         <Link to="/sign-up">
-          <LinkButton>clique aqui</LinkButton>
+          <LinkButton>Não tenho cadastro</LinkButton>
+        </Link>
+        <Link to="/forgot-password">
+          <LinkButton>Esqueci Minha senha</LinkButton>
         </Link>
       </Form>
     </Container>
