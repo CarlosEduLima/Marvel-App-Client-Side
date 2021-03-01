@@ -14,7 +14,7 @@ const EditPasswordModal = ({ closeModal, modalIsOpen }) => {
     };
     console.log(data);
     const response = await api.put(
-      `/reset-password/${localStorage.getItem("userId")}`,
+      `/forgot-password/${localStorage.getItem("userId")}`,
       data
     );
     console.log(response);
