@@ -6,7 +6,7 @@ import SignUp from './pages/SignUp'
 import EditInfo from './pages/EditInfo'
 import Character from './pages/Character'
 import Comic from './pages/Comic'
-import ResetPassword from './pages/reset-password'
+import ForgotPassword from './pages/forgot-password'
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -42,10 +42,10 @@ function App() {
             <Switch>
                 <Route path="/login" component={Login} />
                 <Route path="/sign-up" component={SignUp} />
-                <Route path="/edit-info" component={EditInfo} />
-                <Route path="/character/:id" component={Character} />
-                <Route path="/comic/:id" component={Comic} />
-                <Route path="/reset-password" component={ResetPassword} />
+                <ProtectedRoute path="/edit-info" component={EditInfo} />
+                <ProtectedRoute path="/character/:id" component={Character} />
+                <ProtectedRoute path="/comic/:id" component={Comic} />
+                <Route path="/forgot-password" component={ForgotPassword} />
                 <ProtectedRoute path="/" component={Home} />
             </Switch>
         </BrowserRouter>
