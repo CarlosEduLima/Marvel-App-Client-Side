@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  margin-top: 65px;
+  margin-top: 140px;
   max-width: ${maxWidth}px;
   padding: 0 20px;
   @media(max-width: 830px) {
@@ -41,6 +41,7 @@ export const ContainerInfo = styled.div`
 export const Title = styled.div`
   font-size: 35px;
   font-weight: bold;
+  color: var(--dark);
 `;
 
 export const Description = styled.div`

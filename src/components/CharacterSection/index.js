@@ -6,12 +6,10 @@ export default function CharacterSession({title, data}) {
   return (
     <Container>
       <Content>
-        <h2>{title}</h2> (
-        <>
-          {data.map( character => {
-            <CharacterCard character={character} />;
-          })}
-        </>
+        <h2>{title}</h2> 
+          {data.map( character => (
+            <CharacterCard character={character} />
+          ))}
       </Content>
     </Container>
   );

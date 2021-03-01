@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container, ContainerModal, Content, ContainerFooter, Footer, Title, Subtitle } from './styles';
-
+import {Link}  from 'react-router-dom'
 export default function CharacterCard({character}) {
   return (
     <Container>
@@ -11,6 +11,7 @@ export default function CharacterCard({character}) {
             : "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/portrait_uncanny.jpg"
         } alt="Sanduíche" />
       <ContainerModal>
+        <Link to={`/character/${character.id}`}>
         <Content>
           <img  src={
          character.thumbnail
@@ -23,6 +24,8 @@ export default function CharacterCard({character}) {
             </Footer>
           </ContainerFooter>
         </Content>
+        </Link>
+        
       </ContainerModal>
     </Container>
   );

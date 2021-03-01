@@ -17,7 +17,7 @@ import {
 function Comic() {
   let { id } = useParams();
   const [comic, setComic] = useState([]);
-  const [characters, setCharacter] = useState([]);
+  const [characters, setCharacters] = useState([]);
   useEffect(() => {
     async function loadComic() {
       const response = await marvelApi.get(
@@ -26,13 +26,18 @@ function Comic() {
       console.log(response);
       setComic(response.data.data.results[0]);
 
-      const characterResponse = await marvelApi.get(
+     
+    }
+    async function loadCharacters() {
+      const response = await marvelApi.get(
         `/comics/${id}/characters?apikey=${process.env.REACT_APP_API_KEY}`
       );
-
-      setCharacter(characterResponse.data.data.results);
+      console.log(response);
+      setCharacters(response.data.data.results);     
     }
+    
     loadComic();
+    loadCharacters();
   }, []);
   return (
     <Layout>

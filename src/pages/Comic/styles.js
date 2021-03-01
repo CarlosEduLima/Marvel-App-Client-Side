@@ -15,9 +15,10 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  margin-top: 100px;
+  margin-top: 180px;
   max-width: ${maxWidth}px;
   padding: 0 20px;
+  margin-top: 100px;
   @media(max-width: 830px) {
     text-align: center;
   }
