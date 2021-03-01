@@ -26,6 +26,10 @@ export const ProfileButton = styled.div`
   align-items: center;
   justify-content: center;
   float: right;
+  &:hover {
+    background: white;
+    color: var(--primary);
+  }
 `;
 export const FavoriteContainer = styled.div`
   position: relative;
@@ -59,9 +63,6 @@ export const FavoriteButton = styled.button`
   &:hover {
     background: white;
     color: var(--primary);
-    svg {
-      color: var(--primary);
-    }
   }
 `;
 
@@ -71,8 +72,8 @@ export const StarIcon = styled(StarFill)`
   margin-right: 8px;
   color: #000000;
 `;
-export const AccoountMenu = styled.div`
-  background: #f5f5f5;
+export const AcountMenu = styled.div`
+  background: #a9a9a9;
   width: 130px;
   height: 95px;
   border-radius: 0px 0px 4px 4px;
@@ -83,16 +84,6 @@ export const AccoountMenu = styled.div`
   z-index: 2;
   opacity: 0;
   transition: 0.5s;
-  > ul {
-    list-style: none;
-  }
-  > ul,
-  li {
-    font-size: 18px;
-    color: #000000;
-    margin-bottom: 15px;
-  }
-
   ${({ activeAccountMenu }) =>
     activeAccountMenu &&
     `
@@ -104,32 +95,54 @@ export const ProfileContainer = styled.div`
   position: relative;
 `;
 
-export const FavoriteMenu = styled.div`
-  background: #f5f5f5;
-  width: 180px;
-  height: 95px;
-  border-radius: 0px 0px 4px 4px;
-  margin-left: 8px;
-  padding: 5px;
-  left: -15px;
-  top: 50px;
-  position: absolute;
-  z-index: 2;
-  opacity: 0;
-
-  > ul {
-    list-style: none;
-  }
-  > ul,
-  li {
-    font-size: 18px;
-    color: #000000;
-    margin-bottom: 15px;
-  }
+export const FavoriteMenu  = styled.div`
+    background: #a9a9a9;
+    width: 180px;
+    height: 95px;
+    border-radius: 0px 0px 4px 4px;
+    margin-left: 8px;
+    padding: 5px;
+    left: -15px;
+    top: 50px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    display: block;
 
   ${({ activeFavoriteMenu }) =>
     activeFavoriteMenu &&
     `
     opacity: 1
   `}
+`;
+
+export const FavoriteMenuButtons = styled.button`
+ font-size: 16px;
+  margin-top: 8px;
+  width: 100%;
+  height: 30px;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+`;
+
+
+export const AcountButtons = styled.button`
+  font-size: 16px;
+  margin-top: 8px;
+  width: 100%;
+  height: 30px;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 `;

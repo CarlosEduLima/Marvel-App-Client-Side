@@ -28,6 +28,9 @@ function Login({ history }) {
     const response = await api.post("/login", data);
     console.log(response)
     if (response.status === 200) {
+      localStorage.setItem("userId", response.data.user.id)
+      localStorage.setItem("email", response.data.user.email)
+      localStorage.setItem("name", response.data.user.name)
       login(response.data.token);
       history.push("/");
     } else {

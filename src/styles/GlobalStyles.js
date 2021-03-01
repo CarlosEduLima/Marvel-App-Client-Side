@@ -10,7 +10,7 @@ export default createGlobalStyle`
   html, body, #root{
       max-height: 100vh;
       max-width: 100vh;
-      background: var(--white);
+      background:  #f5f6fa;
       height: 100%;
       width: 100%;
   }
@@ -29,7 +29,6 @@ export default createGlobalStyle`
     --white: #D9D9D9;
     --gray: #7A7A7A;
     --outline: #2F3336;
-    --retweet: #00C06B;
     
   }
 `;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { logout } from "../../services/auth";
 import {
   Container,
   ProfileButton,
@@ -7,11 +8,13 @@ import {
   Logo,
   FavoriteButton,
   StarIcon,
-  AccoountMenu,
+  AcountMenu,
   FavoriteMenu,
   ProfileContainer,
   FavoriteContainer,
   Content,
+  AcountButtons,
+  FavoriteMenuButtons,
 } from "./style";
 import Marvel from "../../assets/marvel.svg";
 
@@ -47,14 +50,12 @@ const Header = () => {
         <Content>
           <FavoriteContainer>
             <FavoriteButton onClick={() => openFavoriteMenu()}>
-            <StarIcon  />
+              <StarIcon />
               Meus favoritos
             </FavoriteButton>
             <FavoriteMenu activeFavoriteMenu={activeFavoriteMenu}>
-              <ul>
-                <li>Comics Favoritas</li>
-                <li>Characters Favoritos</li>
-              </ul>
+              <FavoriteMenuButtons>Comics Favoritas</FavoriteMenuButtons>
+              <FavoriteMenuButtons>Characters Favoritos</FavoriteMenuButtons>
             </FavoriteMenu>
           </FavoriteContainer>
 
@@ -66,12 +67,14 @@ const Header = () => {
               <PersonIcon />
             </ProfileButton>
 
-            <AccoountMenu activeAccountMenu={activeAccountMenu}>
-              <ul>
-                <li>Editar conta</li>
-                <li>Sair</li>
-              </ul>
-            </AccoountMenu>
+            <AcountMenu activeAccountMenu={activeAccountMenu}>
+              <Link to="/edit-info">
+                <AcountButtons>Editar Conta</AcountButtons>
+              </Link>
+              <Link to="/login">
+                <AcountButtons onClick={() => logout()}>Sair</AcountButtons>
+              </Link>
+            </AcountMenu>
           </ProfileContainer>
         </Content>
       </Container>

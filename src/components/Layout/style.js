@@ -5,28 +5,14 @@ export const Container = styled.div`
     width: 100vw;
     margin: 0 auto;
     
-    background-color: var(--white);
+    background-color: #f5f6fa;
 `;
 
 export const Wrapper = styled.div`
-    //max-width: 990px;
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    background-color: var(--white);
+    background-color: #f5f6fa;
     height: 100%;
 `;
 
-export const Header = styled.div`
-  z-index: 2;
-  position: sticky;
-  width: 100%;
-  height: 60px;
-  top: 0;
-  background: #3C4858;
-  display: flex;
-  align-items: center;
-  padding: 8px 0 9px 13px;
-  border-bottom: 1px solid var(--outline);
-  margin-bottom:50px
-`;
