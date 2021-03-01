@@ -4,14 +4,15 @@ export const Container = styled.div`
   width: 100%;
   background-color: var(--primary);
   display: flex;
+  justify-content: center;
   height: 60px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  z-index:2;
 `;
 export const Content = styled.div`
   max-width: 990px;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
   align-items: center;
   justify-content: space-between;
   display: flex;
@@ -21,11 +22,14 @@ export const ProfileButton = styled.div`
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: #f5f5f5;
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   float: right;
+  >svg{
+    color: var(--dark)
+  }
   &:hover {
     background: white;
     color: var(--primary);
@@ -41,7 +45,10 @@ export const PersonIcon = styled(Person)`
 
 export const Logo = styled.img`
   width: 100px;
-  margin-right: 50px;
+  margin-right: 60px;
+  >svg{
+    background: none
+  }
 `;
 
 export const FavoriteButton = styled.button`
@@ -70,10 +77,11 @@ export const StarIcon = styled(StarFill)`
   width: 20px;
   height: 20px;
   margin-right: 8px;
-  color: #000000;
+    color: gold;
+
 `;
 export const AcountMenu = styled.div`
-  background: #a9a9a9;
+  background: var(--dark);
   width: 130px;
   height: 95px;
   border-radius: 0px 0px 4px 4px;
@@ -96,7 +104,7 @@ export const ProfileContainer = styled.div`
 `;
 
 export const FavoriteMenu  = styled.div`
-    background: #a9a9a9;
+    background: var(--dark);
     width: 180px;
     height: 95px;
     border-radius: 0px 0px 4px 4px;
@@ -124,7 +132,7 @@ export const FavoriteMenuButtons = styled.button`
   border-radius: 3px;
   font-weight: bold;
   background-color: transparent;
-  color: #ffffff;
+  color: var(--white);
   cursor: pointer;
   &:focus {
     outline: none;
@@ -140,7 +148,7 @@ export const AcountButtons = styled.button`
   border-radius: 3px;
   font-weight: bold;
   background-color: transparent;
-  color: #ffffff;
+  color: var(--white);
   cursor: pointer;
   &:focus {
     outline: none;

@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   height: 60px;
   bottom: 0;
-    position: fixed;
+  position: relative;
 `;
 export const Content = styled.div`
   max-width: 990px;
@@ -18,6 +18,6 @@ export const Content = styled.div`
   font-weight: 500;
   height: 100%;
   >span{
-    color: #000000;
+    color: var(--dark);
   }
 `;
