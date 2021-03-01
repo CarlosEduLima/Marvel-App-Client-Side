@@ -1,16 +1,16 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      color: var(--white);
+      color: var(--dark);
     }
   html, body, #root{
       max-height: 100vh;
       max-width: 100vh;
-      background:  #f5f6fa;
+      background: var(--white);
       height: 100%;
       width: 100%;
   }
@@ -19,16 +19,20 @@ export default createGlobalStyle`
       background: none;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
+  code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
   html{
-      background: var(--primary);
+    background-color: var(--white);
   }
   :root{
-    --primary: #ED1B24;
+    --primary: #e23636;
     --secondary: #EE1B24;
-    --search: #202327;
-    --white: #D9D9D9;
-    --gray: #7A7A7A;
-    --outline: #2F3336;
+    --white: #f5f6fa;
+    --input: #e23636;
+    --dark: #504a4a
     
   }
 `;
