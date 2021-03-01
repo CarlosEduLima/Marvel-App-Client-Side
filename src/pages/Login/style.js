@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     height: 100%;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -42,9 +42,12 @@ export const Input = styled.input`
   margin: 0.5em;
   height: 45px;
   font-size:14px;
-  color: palevioletred;
+  color: #000000;
   background: #F5F5F5;
   border-radius: 3px;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Button = styled.button`
