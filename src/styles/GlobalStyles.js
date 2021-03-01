@@ -19,7 +19,6 @@ export default createGlobalStyle`
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   *, a {
-     color: var(--dark);
      text-decoration: none;
      
   }

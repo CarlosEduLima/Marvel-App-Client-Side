@@ -99,6 +99,7 @@ export const Title = styled.div`
   font-weight: bold;
   font-size: 17px;
   width: 100%;
+  color: var(--dark)
 `;
 
 export const Subtitle = styled.div`
@@ -106,4 +107,5 @@ export const Subtitle = styled.div`
   font-size: 14px;
   color: #555;
   width: 100%;
+  color: var(--dark)
 `;

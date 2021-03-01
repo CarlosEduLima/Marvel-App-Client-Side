@@ -26,13 +26,11 @@ function Comic() {
       console.log(response);
       setComic(response.data.data.results[0]);
 
-      marvelApi.get(
+      const characterResponse = await marvelApi.get(
         `/comics/${id}/characters?apikey=${process.env.REACT_APP_API_KEY}`
-      ).then((res) =>{
-        setCharacter(res.data.data.results);
-      })
-      
-      
+      );
+
+      setCharacter(characterResponse.data.data.results);
     }
     loadComic();
   }, []);
@@ -55,7 +53,7 @@ function Comic() {
             <ReleaseDate>{comic.pageCount} Páginas</ReleaseDate>
           </ContainerInfo>
         </Content>
-          <CharacterSection characters={characters} title="Personagens" />;
+        <CharacterSection data={characters} title="Personagens" />;
       </Container>
     </Layout>
   );
