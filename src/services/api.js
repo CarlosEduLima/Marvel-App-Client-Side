@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:3001/api',
+    baseURL: 'https://marvel-app-stone-case.herokuapp.com/api',
     headers: { Authorization: `Bearer ${localStorage.getItem("marvel-token")}` }
 });
 
