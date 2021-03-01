@@ -43,8 +43,8 @@ function App() {
                 <Route path="/login" component={Login} />
                 <Route path="/sign-up" component={SignUp} />
                 <Route path="/edit-info" component={EditInfo} />
-                <Route path="/characters/:id" component={Character} />
-                <Route path="/comics/:id" component={Comic} />
+                <Route path="/character/:id" component={Character} />
+                <Route path="/comic/:id" component={Comic} />
                 <Route path="/reset-password" component={ResetPassword} />
                 <ProtectedRoute path="/" component={Home} />
             </Switch>

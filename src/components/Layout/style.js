@@ -5,14 +5,14 @@ export const Container = styled.div`
     width: 100vw;
     margin: 0 auto;
     
-    background-color: #f5f6fa;
+    background-color: var(--white);
 `;
 
 export const Wrapper = styled.div`
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    background-color: #f5f6fa;
+    background-color: var(--white);
     height: 100%;
 `;
 

@@ -10,11 +10,12 @@ export const Container = styled.div`
   background-color: #f5f6fa;
   overflow: auto;
   padding-bottom: 200px;
+
 `;
 
 export const Content = styled.div`
   width: 100%;
-  margin-top: 65px;
+  margin-top: 100px;
   max-width: ${maxWidth}px;
   padding: 0 20px;
   @media(max-width: 830px) {

@@ -18,6 +18,11 @@ export default createGlobalStyle`
       background: none;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
+  *, a {
+     color: var(--dark);
+     text-decoration: none;
+     
+  }
   code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
