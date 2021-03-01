@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import { Form, Input, CloseIcon, Button, CloseButton } from "./style";
 import { toast } from "react-toastify";
-import api from '../../../services/api'
-const EditNameModal = ({closeModal, modalIsOpen}) => {
-  const [name, setName] = useState([]);
-
+import api from "../../../services/api";
+const EditPasswordModal = ({ closeModal, modalIsOpen }) => {
+  const [oldPassword, setOldPassword] = useState([]);
+  const [newPassword, setNewPassword] = useState([]);
   async function handleSubmit(event) {
     event.preventDefault();
     const data = {
-      name: name,
+      oldPassword: oldPassword,
+      newPassword: newPassword,
     };
     console.log(data);
     const response = await api.put(
-      `/user-name/${localStorage.getItem("userId")}`,
+      `/reset-password/${localStorage.getItem("userId")}`,
       data
     );
     console.log(response);
     if (response.status === 200) {
-      localStorage.setItem("email", name)
-      toast.success(`Email atualizado`, {
+      toast.success(`Senha atualizada`, {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -28,9 +28,9 @@ const EditNameModal = ({closeModal, modalIsOpen}) => {
         draggable: true,
         progress: undefined,
       });
-      closeModal()
+      closeModal();
     } else {
-      toast.error(`Erro ao atualizar email`, {
+      toast.error(`Erro ao atualizar senha`, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -55,7 +55,6 @@ const EditNameModal = ({closeModal, modalIsOpen}) => {
       overflow: "auto",
     },
   };
-  
 
   return (
     <>
@@ -65,14 +64,21 @@ const EditNameModal = ({closeModal, modalIsOpen}) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        
-        
         <Form onSubmit={handleSubmit}>
-        <h3>Novo nome</h3>
+          <h3>Nova senha</h3>
           <CloseButton>
-            <CloseIcon onClick={closeModal}/>
+            <CloseIcon onClick={closeModal} />
           </CloseButton>
-          <Input placeholder="Nome" required onChange={(event) => setName(event.target.value)} />
+          <Input
+            placeholder="Sua senha"
+            required
+            onChange={(event) => setOldPassword(event.target.value)}
+          />
+          <Input
+            placeholder="Nova senha"
+            required
+            onChange={(event) => setNewPassword(event.target.value)}
+          />
           <Button type="submit">Atualizar</Button>
         </Form>
       </Modal>
@@ -80,4 +86,4 @@ const EditNameModal = ({closeModal, modalIsOpen}) => {
   );
 };
 
-export default EditNameModal;
+export default EditPasswordModal;

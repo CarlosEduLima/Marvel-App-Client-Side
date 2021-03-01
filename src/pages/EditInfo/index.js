@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
-import { Link } from "react-router-dom";
 import EditNameModal from "../../components/Modals/EditNameModal"
 import EditEmailModal from '../../components/Modals/EditEmailModal'
+import EditPasswordModal from '../../components/Modals/EditPasswordModal'
 import {
   Container,
   InfoContainer,
   EditIcon,
   EditInfoButton,
+  UserName,
+  UserEmail
 } from "./style.js";
 
 function Login({ history }) {
@@ -28,6 +30,15 @@ function Login({ history }) {
   function closeeditEmailModal() {
    seteditEmailModalOpen(false);
   }
+
+  const [editPasswordModalIsOpen, seteditPasswordModalOpen] = useState(false);
+  function openeditPasswordModal() {
+   seteditPasswordModalOpen(true);
+  }
+
+  function closeeditPasswordModal() {
+   seteditPasswordModalOpen(false);
+  }
   return (
     <Layout>
       <Container>
@@ -42,20 +53,30 @@ function Login({ history }) {
             closeModal={closeeditEmailModal}
             modalIsOpen={editEmailModalIsOpen}
           />
+          <EditPasswordModal
+            openModal={openeditPasswordModal}
+            closeModal={closeeditPasswordModal}
+            modalIsOpen={editPasswordModalIsOpen}
+          />
+          <UserName>
+            <span>{localStorage.getItem("name")}</span>
+          </UserName>
           <EditInfoButton onClick={openeditNameModal}>
-            Edit Name
+            Atualizar nome
             <EditIcon />
           </EditInfoButton>
+          <UserEmail>
+            <span>{localStorage.getItem("email")}</span>
+          </UserEmail>
           <EditInfoButton onClick={openeditEmailModal}>
-            Edit Email
+            Atualizar email
             <EditIcon />
           </EditInfoButton>
-          <Link to="/reset-password">
-            <EditInfoButton>
-              Edit Password
+        
+            <EditInfoButton onClick={openeditPasswordModal}>
+              Atualizar Senha
               <EditIcon />
             </EditInfoButton>
-          </Link>
         </InfoContainer>
       </Container>
     </Layout>

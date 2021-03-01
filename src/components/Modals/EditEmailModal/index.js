@@ -1,8 +1,46 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Form, Input, CloseIcon, Button, CloseButton } from "./style";
+import { toast } from "react-toastify";
+import api from '../../../services/api'
+const EditEmailModal = ({ closeModal, modalIsOpen }) => {
+  const [email, setEmail] = useState([]);
 
-const EditEmailModal = ({closeModal, modalIsOpen}) => {
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const data = {
+      email: email,
+    };
+    console.log(data);
+    const response = await api.put(
+      `/user-email/${localStorage.getItem("userId")}`,
+      data
+    );
+    console.log(response);
+    if (response.status === 200) {
+      localStorage.setItem("email", email)
+      toast.success(`Email atualizado`, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      closeModal()
+    } else {
+      toast.error(`Erro ao atualizar email`, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
   const customStyles = {
     content: {
       top: "50%",
@@ -17,7 +55,6 @@ const EditEmailModal = ({closeModal, modalIsOpen}) => {
       overflow: "auto",
     },
   };
-  
 
   return (
     <>
@@ -27,12 +64,17 @@ const EditEmailModal = ({closeModal, modalIsOpen}) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <Form>
+        <Form onSubmit={handleSubmit}>
+          <h3>Novo email</h3>
           <CloseButton>
-            <CloseIcon onClick={closeModal}/>
+            <CloseIcon onClick={closeModal} />
           </CloseButton>
-          <Input placeholder="Email" />
-          <Button>Enviar</Button>
+          <Input
+            required
+            placeholder="Email"
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <Button type="submit">Atualizar</Button>
         </Form>
       </Modal>
     </>
